@@ -1,0 +1,15 @@
+.add-new-beer-container {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  width: 400px;
+  margin: 20px;
+}
+
+.add-new-beer-container input {
+  width: 100%;
+}
+
+.add-new-beer__button {
+  margin-top: 20px;
+}

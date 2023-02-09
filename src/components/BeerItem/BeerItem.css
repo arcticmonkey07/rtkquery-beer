@@ -1,0 +1,74 @@
+.beer-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 25%;
+  padding: 20px 19px 26px 20px;
+  box-shadow: 0px 0px 0px 1px #f2f2f2 inset;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 1050px) {
+  .beer-item {
+    width: 33.33%;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .beer-item {
+    width: 50%;
+  }
+}
+
+
+.beer-item__img {
+  width: 51px;
+  height: 170px;
+}
+
+.beer-item__header {
+  margin: 10px 0 0px 0;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.beer-item__sort {
+  color: black;
+  font-size: 12px;
+  line-height: 15px;
+  padding-bottom: 10px;
+  padding-top: 5px;
+  margin-bottom: 0px;
+}
+
+.beer-item__availability {
+  display: flex;
+}
+
+.beer-item__icon {
+  display: block;
+  width: 14px;
+  height: 14px;
+  background: url("https://rusbeershop.ru/local/templates/aspro_next/images/ai.png") -113px -48px
+    no-repeat;
+  margin: 1px 6px 0px 0px;
+}
+
+.beer-item__availability-text {
+  font-size: 12px;
+  color: #666;
+}
+
+.beer-item__price {
+  margin-top: 11px;
+  margin-bottom: 30px;
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 15px;
+}
+
+.beer-item__delete {
+  margin-top: auto;
+}

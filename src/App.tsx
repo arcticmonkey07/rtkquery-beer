@@ -1,24 +1,26 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import BeersContainer from "./components/BeersConrainer/BeerContainer";
+import { useAppDispatch, useAppSelector } from "./hooks/redux";
+import { fetchUsers } from "./store/reducers/ActionCreators";
+import AddBeer from './components/AddBeer/AddBeer';
 
 function App() {
+  // const { users, isLoading, error } = useAppSelector(
+  //   (state) => state.userReducer
+  // );
+  // const dispatch = useAppDispatch();
+
+  // useEffect(() => {
+  //   dispatch(fetchUsers());
+  // }, []);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {/* {isLoading && <div>Loading...</div>}
+      {error && <h2>{error}</h2>}
+      <div>{JSON.stringify(users, null, 2)}</div> */}
+      <AddBeer />
+      <BeersContainer />
     </div>
   );
 }

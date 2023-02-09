@@ -1,0 +1,5 @@
+﻿
+Продвинутый Redux. Redux Toolkit, RTK query, TypeScript.
+Ulbi TV
+
+https://www.youtube.com/watch?v=Od5H_CiU2vM&t=627s
