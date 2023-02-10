@@ -1,4 +1,4 @@
-.add-new-beer-container {
+.add-new-beer-form {
   display: flex;
   flex-direction: column;
   align-items: start;
@@ -6,7 +6,15 @@
   margin: 20px;
 }
 
-.add-new-beer-container input {
+.add-new-beer-form_dark {
+  background-color: rgb(112, 110, 110);
+}
+
+.add-new-beer-form_dark label {
+  color: #fff;
+}
+
+.add-new-beer-form input {
   width: 100%;
 }
 

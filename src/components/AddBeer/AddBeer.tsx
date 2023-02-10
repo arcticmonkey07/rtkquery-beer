@@ -2,8 +2,11 @@ import { useRef } from "react";
 import "./AddBeer.css";
 import { IBeer } from "../../models/IBeer";
 import { beerAPI } from "../../services/BeerService";
+import { useAppSelector } from "../../hooks/redux";
 
 function AddBeer() {
+  const dark = useAppSelector(state => state.beerReducer.dark);
+
   const img = useRef<HTMLInputElement>(null);
   const name = useRef<HTMLInputElement>(null);
   const manufacturer = useRef<HTMLInputElement>(null);
@@ -34,7 +37,7 @@ function AddBeer() {
 
   return (
     <>
-      <div className="add-new-beer-container">
+      <form className={`add-new-beer-form ${dark && "add-new-beer-form_dark"}`}>
         <label htmlFor="img">Введите ссылку на картинку</label>
         <input type="text" id="img" ref={img} />
         <label htmlFor="name">Введите название пива</label>
@@ -50,7 +53,7 @@ function AddBeer() {
         <button className="add-new-beer__button" onClick={handleCreate}>
           Добавить новое пиво
         </button>
-      </div>
+      </form>
     </>
   );
 }

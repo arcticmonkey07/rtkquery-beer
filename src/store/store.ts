@@ -3,11 +3,11 @@ import {
   configureStore,
   getDefaultMiddleware,
 } from "@reduxjs/toolkit";
-import userReducer from "./reducers/UserSlice";
+import beerReducer from "./reducers/BeerSlice";
 import { beerAPI } from "../services/BeerService";
 
 const rootReducer = combineReducers({
-  userReducer,
+  beerReducer,
   [beerAPI.reducerPath]: beerAPI.reducer,
 });
 

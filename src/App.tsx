@@ -1,24 +1,24 @@
 import "./App.css";
 import BeersContainer from "./components/BeersConrainer/BeerContainer";
-import { useAppDispatch, useAppSelector } from "./hooks/redux";
-import { fetchUsers } from "./store/reducers/ActionCreators";
 import AddBeer from './components/AddBeer/AddBeer';
+import { useAppSelector } from "./hooks/redux";
+import Header from "./components/Header/Header";
 
 function App() {
-  // const { users, isLoading, error } = useAppSelector(
-  //   (state) => state.userReducer
-  // );
-  // const dispatch = useAppDispatch();
+  const dark = useAppSelector(state => state.beerReducer.dark);
 
-  // useEffect(() => {
-  //   dispatch(fetchUsers());
-  // }, []);
+  if (dark) {
+    document.body.style.backgroundColor = "rgb(112, 110, 110)";
+  } else {
+    document.body.style.backgroundColor = "#fff";
+  }
 
   return (
     <div className="App">
       {/* {isLoading && <div>Loading...</div>}
       {error && <h2>{error}</h2>}
       <div>{JSON.stringify(users, null, 2)}</div> */}
+      <Header />
       <AddBeer />
       <BeersContainer />
     </div>
